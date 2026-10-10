@@ -12,6 +12,7 @@ obj-$(CONFIG_$(PHASE_)LIB_BOOTM) += bootm.o
 obj-$(CONFIG_$(PHASE_)LIB_BOOTI) += image.o
 obj-$(CONFIG_CMD_GO) += boot.o
 obj-y	+= cache.o
+obj-y	+= nohardfloat.o
 obj-$(CONFIG_SIFIVE_CACHE) += sifive_cache.o
 obj-$(CONFIG_SYS_CACHE_THEAD_CMO) += thead_cmo.o
 ifeq ($(CONFIG_$(PHASE_)RISCV_MMODE),y)
