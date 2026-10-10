@@ -24,3 +24,7 @@ U-Boot 2026.10-rc5-00028-gc92d8c3c431e-dirty (Oct 10 2026 - 10:24:14 +0300)
 riscv32-unknown-elf-gcc (g6afcc4f6d) 16.1.0
 GNU ld (GNU Binutils) 2.47.20260726
 ```
+
+Thanks,
+
+Hardware department of the MediaTek MT6768 department of the MediaTek MT6572 Mainline Inc.
