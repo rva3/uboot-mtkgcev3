@@ -2121,7 +2121,7 @@ ifeq ($(CONFIG_KALLSYMS),y)
 endif
 
 ifeq ($(CONFIG_RISCV),y)
-	@tools/prelink-riscv $@
+	@if $(CROSS_COMPILE)readelf -S $@ | grep -q '\.rela\.dyn'; then tools/prelink-riscv $@; else echo "skip reloc fixup"; fi
 endif
 
 quiet_cmd_sym ?= SYM     $@

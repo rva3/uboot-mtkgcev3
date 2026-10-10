@@ -37,7 +37,7 @@ endif
 
 PLATFORM_CPPFLAGS	+= -ffixed-x3 -fpic
 PLATFORM_RELFLAGS	+= -fno-common -ffunction-sections -fdata-sections
-LDFLAGS_u-boot		+= --gc-sections -static -pie
+LDFLAGS_u-boot		+= --gc-sections -static
 
 EFI_CRT0		:= crt0_riscv_efi.o
 EFI_RELOC		:= reloc_riscv_efi.o
