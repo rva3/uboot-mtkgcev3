@@ -1080,6 +1080,10 @@ void board_init_f(ulong boot_flags)
 
 	initcall_run_f();
 
+#if CONFIG_IS_ENABLED(SKIP_RELOCATE)
+	if (gd->flags & GD_FLG_SKIP_RELOC)
+		board_init_r(gd, 0);
+#endif
 #if !defined(CONFIG_ARM) && !defined(CONFIG_SANDBOX) && \
 		!defined(CONFIG_EFI_APP) && !CONFIG_IS_ENABLED(X86_64) && \
 		!defined(CONFIG_ARC)
